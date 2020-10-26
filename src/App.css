@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%; /* 1rem = 10px*/
+}
+body {
+	margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main{
+  padding:1.5rem;
+  font-size:1.6rem;
+}
+
+
+form{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+}
+.field{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.field input{
+  margin: 1rem 0;
+  min-width: 50rem;
+  border:1px solid purple;
+  text-transform: capitalize;
+  padding:1rem;
+}
+.field input:hover,
+.field input:focus,
+.field input:active{
+  border:1px solid #e411e4;
+}

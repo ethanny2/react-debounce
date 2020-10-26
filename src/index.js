@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import App2 from './App2';
 
+/*Use App2 for how to implement debounce without lodash */
 ReactDOM.render(
   <React.StrictMode>
     <App />
