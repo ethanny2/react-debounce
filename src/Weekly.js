@@ -1,7 +1,6 @@
-const Weekly = ({ weekArr, styles }) => {
+const Weekly = ({ weekArr }) => {
 	console.log(weekArr);
   const today = new Date();
-  console.log(styles);
 	return (
 		<section
 			style={{
@@ -9,7 +8,6 @@ const Weekly = ({ weekArr, styles }) => {
 				gridTemplateColumns: 'repeat(auto-fit, minmax(4rem, 1fr))',
 				gap: '1rem',
         padding: '1rem',
-        ...styles
 			}}
 		>
 			{weekArr.map((day, i) => {

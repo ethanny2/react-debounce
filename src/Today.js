@@ -4,7 +4,8 @@ const Today = ({ today }) => {
 			<h2>{today.name}</h2>
 			<div>
 				<img
-					src={`http://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png`}
+          src={`http://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png`}
+          alt={today.weather[0].description}
 				/>
 			</div>
 			<p>Wind Speed: {today.wind.speed}</p>
