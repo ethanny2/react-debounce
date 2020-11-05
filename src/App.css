@@ -38,3 +38,23 @@ form{
 .field input:active{
   border:1px solid #e411e4;
 }
+
+/*CSS Transition group styles  */
+.weekly-enter{
+  opacity:0;
+}
+.weekly-enter-active{
+  opacity:1;
+  transition: all 1s;
+}
+.weekly-exit{
+  opacity: 1;
+
+}
+.weekly-exit-active{
+  transition: all 1s;
+  opacity: 0;
+}
+.weekly-exit-done{
+  opacity: 0;
+}
