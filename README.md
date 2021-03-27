@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+[![GitHub issues](https://img.shields.io/github/issues/ethanny2/react-debounce)](https://github.com/ethanny2/react-debounce/issues)[![GitHub forks](https://img.shields.io/github/forks/ethanny2/react-debounce)](https://github.com/ethanny2/react-debounce/network)[![GitHub stars](https://img.shields.io/github/stars/ethanny2/react-debounce)](https://github.com/ethanny2/react-debounce/stargazers)[![GitHub license](https://img.shields.io/github/license/ethanny2/react-debounce)](https://github.com/ethanny2/react-debounce)[![Twitter Badge](https://img.shields.io/badge/chat-twitter-blue.svg)](https://twitter.com/ArrayLikeObj)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# React Hooks Debounce
 
-In the project directory, you can run:
+<p align="center">
+  <img width="460" height="300" src="https://media1.giphy.com/media/emDkdpzsX4lFSPdj6L/giphy.gif">
+</p>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Background
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This is a short demo demonstrating how to make a  2 versions of a debounced network search. 
+- The first with the use of the [lodash library's debounce() method](https://lodash.com/docs/4.17.15#debounce) 
+- The second is made with React 16+ and useEffect hooks.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Used
 
-### `npm run build`
+- React 16 (hooks)
+- lodash (for debounce())
+- axios (for network requests)
+- OpenWeatherApi (for up to data weather forecasts)
+- react-transition-group (forsimple declarative animation on React components)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Concepts 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Debouncing
+- A common programming pattern to optimize how many times a specific function can be
+called in given period of time. 
+- Commonly seen in use with search bars such as on Google / and any other search engine. If the function to search for the weather fired everytime the user fired the keyDown event (they pressed a key) it would start the network request as soon the first key is pressed, thus wasting bandwidth and slowing down your application.
+- The solution is to have the function only execute after a specified time period (usually between 100ms - 800ms before users start to feel the delay).
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### axios
+- Using the axios.create() method to abstract the weather API into objects that more clearly convey their use and semantic meaning
